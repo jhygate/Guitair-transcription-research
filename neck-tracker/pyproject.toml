@@ -1,0 +1,15 @@
+[project]
+name = "fretboard-tracker"
+version = "0.1.0"
+description = "Simple fretboard tracking using Hough lines"
+requires-python = ">=3.10"
+dependencies = [
+    "opencv-python>=4.9.0",
+    "numpy>=1.26.0",
+    "matplotlib>=3.10.8",
+    "scipy>=1.15.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
