@@ -94,7 +94,7 @@ class LineSegment:
             return other.get_intersection(self)
 
         if type(other) == LineSegment:
-            potentialIntersection = other.get_intersection(self)
+            potentialIntersection = other.line.get_intersection(self)
             if potentialIntersection == None:
                 return None
 
@@ -132,7 +132,7 @@ def point_to_point_dist(p1, p2):
 def min_distance(l1, l2):
     """Minimum distance between two line segments"""
     # Check if segments intersect
-    intersection = l1.intersection(l2)
+    intersection = l1.get_intersection(l2)
     if intersection and l1.point_on_segment(intersection.x, intersection.y) and l2.point_on_segment(intersection.x, intersection.y):
         return 0.0
     
